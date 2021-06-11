@@ -5,7 +5,8 @@ if(ser.isOpen()):
 
 #key = '1' # stop
 #key = '2' # forward
-#key = '3'  # detect traffic lights
+#key = '3' # detect start
+#key = '4' # detect green light
 
 key = str(input())
 ser.write(serial.to_bytes([int(key, 16)]))
