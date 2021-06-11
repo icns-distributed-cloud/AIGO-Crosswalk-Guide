@@ -47,7 +47,7 @@ def threaded(client_socket, addr):
             data = numpy.frombuffer(stringData, dtype="uint8")
 
             decimg = cv2.imdecode(data,1)
-            ####
+            #### ADD PROCESS
             cv2.imshow('Image', decimg)
             if n <max_num:
                 cv2.imwrite('images/'+str(n)+'.jpg',decimg)
