@@ -7,7 +7,7 @@ import json
 # GeoJSON : (lon,lat)
 
 # calculate
-# 지구가 둥글기 때문에 유클리이단 거리를 이용하면 안된다.
+# 지구가 둥글기 때문에 유클리디안 거리를 이용하면 안된다.
 # Haversine formuala 이용
 def calc_length_of_crosswalk(start, end):
     res = haversine(start,end)*1000
@@ -16,23 +16,23 @@ def calc_length_of_crosswalk(start, end):
 url = 'https://apis.openapi.sk.com/tmap/routes/pedestrian'
 
 headers={
-    "appkey": "{APPKEY}",   # appkey
+    "appkey": "{APPKEY}",       # appkey
     "version":"1",
     "callback":""
 
 }
 
 # default
-'''    "startX":126.97871544,      # start lon
+'''    "startX":126.97871544,   # start lon
     "startY" :37.56689860,      # start lat
     "endX" : 127.0016021,       # end lon
-    "endY": 37.57081522, 
+    "endY": 37.57081522,        # end lat
 '''
 data ={
-    "startX":127.076444,      # start lon
-    "startY" :37.248176,      # start lat
-    "endX" : 127.077443,       # end lon
-    "endY": 37.256968,        # end lat
+    "startX":127.076444,        # start lon
+    "startY" :37.248176,        # start lat
+    "endX" : 127.077443,        # end lon
+    "endY": 37.256968,          # end lat
     "startName":"test_start",
     "endName":"test_end"
 }
